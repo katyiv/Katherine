@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="style.css">
+ 
+  <title>Katherine Makeup - Home</title>
+
+<script>
+  (function(){
+  
+
+  let msg = "We use cookies to enhance your web browsing experience. By continuing to browse the site you agree to our policy on cookie usage.";
+  let closeBtnMsg = "OK";
+  let privacyBtnMsg = "Privacy Policy";
+  let privacyLink = "home.html";
+  
+
+  if(document.cookie){
+   let cookieString = document.cookie;
+   let cookieList = cookieString.split(";");
+
+   for(x = 0; x < cookieList.length; x++){
+     if (cookieList[x].indexOf("OKCookie") != -1){return}; 
+   }
+  }
+  
+  let docRoot = document.body;
+  let okC = document.createElement("div");
+  okC.setAttribute("id", "okCookie");
+  let okCp = document.createElement("p");
+  let okcText = document.createTextNode(msg); 
+  
+  //close button
+  let okCclose = document.createElement("a");
+  let okcCloseText = document.createTextNode(closeBtnMsg);
+  okCclose.setAttribute("href", "#");
+  okCclose.setAttribute("id", "okClose");
+  okCclose.appendChild(okcCloseText);
+  okCclose.addEventListener("click", closeCookie, false);
+ 
+  //privacy button
+  let okCprivacy = document.createElement("a");
+  let okcPrivacyText = document.createTextNode(privacyBtnMsg);
+  okCprivacy.setAttribute("href", privacyLink);
+  okCprivacy.setAttribute("id", "okCprivacy");
+  okCprivacy.appendChild(okcPrivacyText);
+  
+  //add to DOM
+  okCp.appendChild(okcText);
+  okC.appendChild(okCp);
+  okC.appendChild(okCclose);
+  okC.appendChild(okCprivacy);
+  docRoot.appendChild(okC);
+  
+  okC.classList.add("okcBeginAnimate");
+  
+  function closeCookie(){
+    let cookieExpire = new Date();
+    cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
+    document.cookie="OKCookie=1; expires=" + cookieExpire.toGMTString() + ";";
+    docRoot.removeChild(okC);
+  }
+  
+})();
+</script>
+
+</head>
+
+<body>
+<header id="hdr"><img id="slika" src="hero-dark.jpg"></header>
+<div class="naslov">
+    <h2>KATHERINE MAKEUP</h2> 
+  </div>
+</div>
+
+<div class="vertical-menu">
+ <a href="home.html">HOME </a>
+   <a href="contact.html">CONTACT </a>
+    <a href="about.html">ABOUT </a>
+  </div>
+
+<!-- Grey pics -->
+  <div class="media">
+ <a href="http://instagram.com/katy.iv"><img  id="image1" src="24b.jpg" onmouseover="over()" onmouseout="out()" width="320" height="169"></a>
+ <a href="http://instagram.com/katherine.mkp"><img  id="image2" src="clientsb.jpg" onmouseover="over1()" onmouseout="out1()" width="320" height="169"></a>
+ <a href="makeuprevolution.com"><img  id="image3" src="collabb.jpg" onmouseover="over2()" onmouseout="out2()"  width="320" height="169"></a>
+</div>
+
+</div>
+<div class="object1">
+  <h3>ARTISTIC MAKEUP</h3> 
+</div>
+<div class="object2">
+  <h3>CLIENT MAKEUP</h3> 
+</div>
+<div class="object3">
+  <h3>COLLABORATIONS</h3> 
+</div>
+<!-- Slideshow container -->
+<div class="slidediv">
+
+<div class="slideshow-container">
+
+  <!-- Pictures -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5
+    </div>
+    <img class="slicice" src="1.jpg" style="width:50%">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img class="slicice" src="2.jpg" style="width:50%">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img class="slicice" src="3.jpg" style="width:50%">
+    </div>
+ <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img class="slicice" src="4.jpg" style="width:50%">
+  </div>
+
+<div class="mySlides fade">
+    <div class="numbertext">5 / 5 </div>
+    <img class="slicice" src="5.jpg" style="width:50%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div></div>
+
+
+<!-- Newsletters -->
+<div class="email">
+<h2> SIGN UP TO RECEIVE NEWSLETTER</h2> 
+<p style="text-align:center"> Stay up to date with us to receive exclusive content.<br> We respect your privacy. None of the information you provide<br> will be shared with anyone or used in other ways than for news and updates.</p>
+<br>
+<input type="email" name="mail" placeholder="Email address..."><br><br>
+<input type="submit" value="SEND">
+<br>
+</div>
+<!-- Footer -->
+
+<footer>
+   <h5>Copyright by Katarina Ivanisevic VD 16/18</h5>
+<p>Click the button to toggle between dark and light mode for this page.</p>
+
+<div class="box-2">
+<div class="btn btn-two">
+<button onclick="myFunction()">CHANGE MODE</button>
+</div>
+ </div>
+
+  </footer>
+</body>
+<!-- SCRIPT -->
+<script>
+
+        function over() {
+        document.getElementById('image1').src = "24.jpg"
+              }
+
+
+        function out() {
+        document.getElementById('image1').src = "24b.jpg"
+              }
+function over1() {
+        document.getElementById('image2').src = "clients.jpg"
+              }
+
+
+        function out1() {
+        document.getElementById('image2').src = "clientsb.jpg"
+              }
+    function over2() {
+        document.getElementById('image3').src ="collab.jpg"
+              }
+
+
+        function out2() {
+        document.getElementById('image3').src = "collabb.jpg"
+              }          
+
+    </script>
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+function myFunction() {
+  
+   let element = document.body;
+   element.classList.toggle("dark-mode")
+   
+
+}
+</script>
+
+
+</html>
