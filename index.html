@@ -18,63 +18,14 @@
   <link rel="icon"
 href="sitepics/rose.jpg">
                                 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1FF3M7FC8H"></script>
 <script>
-  (function(){
-  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  let msg = "We use cookies to enhance your web browsing experience. By continuing to browse the site you agree to our policy on cookie usage.";
-  let closeBtnMsg = "OK";
-  let privacyBtnMsg = "Privacy Policy";
-  let privacyLink = "home.html";
-  
-
-  if(document.cookie){
-   let cookieString = document.cookie;
-   let cookieList = cookieString.split(";");
-
-   for(x = 0; x < cookieList.length; x++){
-     if (cookieList[x].indexOf("OKCookie") != -1){return}; 
-   }
-  }
-  
-  let docRoot = document.body;
-  let okC = document.createElement("div");
-  okC.setAttribute("id", "okCookie");
-  let okCp = document.createElement("p");
-  let okcText = document.createTextNode(msg); 
-  
-  //close button
-  let okCclose = document.createElement("a");
-  let okcCloseText = document.createTextNode(closeBtnMsg);
-  okCclose.setAttribute("href", "#");
-  okCclose.setAttribute("id", "okClose");
-  okCclose.appendChild(okcCloseText);
-  okCclose.addEventListener("click", closeCookie, false);
- 
-  //privacy button
-  let okCprivacy = document.createElement("a");
-  let okcPrivacyText = document.createTextNode(privacyBtnMsg);
-  okCprivacy.setAttribute("href", privacyLink);
-  okCprivacy.setAttribute("id", "okCprivacy");
-  okCprivacy.appendChild(okcPrivacyText);
-  
-  //add to DOM
-  okCp.appendChild(okcText);
-  okC.appendChild(okCp);
-  okC.appendChild(okCclose);
-  okC.appendChild(okCprivacy);
-  docRoot.appendChild(okC);
-  
-  okC.classList.add("okcBeginAnimate");
-  
-  function closeCookie(){
-    let cookieExpire = new Date();
-    cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
-    document.cookie="OKCookie=1; expires=" + cookieExpire.toGMTString() + ";";
-    docRoot.removeChild(okC);
-  }
-  
-})();
+  gtag('config', 'G-1FF3M7FC8H');
 </script>
 
 </head>
