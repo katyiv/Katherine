@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <link rel="stylesheet" href="contact.css">
- 
-  <title>Katherine Makeup - Contact </title>
+<meta charset="UTF-8">
+<meta name="description" content=" Personal work of a Makeup Artist and Content creator.
+Place for Unique Face Art ideas and makeup">
+<meta name="keywords" content="sminka,face art, art, face makeup, face art ideas, content creator,makeup artist, katherine, eye makeup"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta property="og:url" content="https://github.com/katyiv/Katherine"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Katherine Makeup"/>
+<meta property="og:description" content="Personal work of a Makeup Artist and Content creator. Place for Unique Face Art ideas and makeup"/>
+<meta property="og:image" content="https://katyiv.github.io/Katherine/sitepics/hero-dark-min.jpg"/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="sitepics/rose.jpg">
+<link rel="stylesheet" href="contact.css">
+ <title>Katherine Makeup - Home</title>
 </head>
 
 <body>
 
+<header id="hdr"><img id="slika" src="sitepics/hero-dark-min.jpg"></header>
 <div class="naslov">
     <h2>KATHERINE MAKEUP</h2> 
   </div>
-<div id="slika">
 </div>
 
 <div class="vertical-menu">
- <a href="home.html">HOME </a>
-   <a href="kontakt.html">CONTACT </a>
+ <a href="home.html">HOME</a>
+   <a href="contact.html">CONTACT </a>
     <a href="about.html">ABOUT </a>
   </div>
+/div>
 
 <div class="media">
   <div class="forma">
@@ -81,6 +91,7 @@ I have read and agree to the Terms and Conditions and Privacy Policy<input type=
 </div>
 </div>
 
+<!-- Newsletters -->
 <div class="email">
 <h2> SIGN UP TO RECEIVE NEWSLETTER</h2> 
 <p style="text-align:center"> Stay up to date with us to receive exclusive content.<br> We respect your privacy. None of the information you provide<br> will be shared with anyone or used in other ways than for news and updates.</p>
@@ -89,7 +100,6 @@ I have read and agree to the Terms and Conditions and Privacy Policy<input type=
 <input type="submit" value="SEND">
 <br>
 </div>
-
 <!-- Footer -->
 
 <footer>
@@ -101,124 +111,22 @@ I have read and agree to the Terms and Conditions and Privacy Policy<input type=
 <button onclick="myFunction()">CHANGE MODE</button>
 </div>
  </div>
+ </footer>
 
-  </footer>
 </body>
-
-<script>
-function myFunction() {
-  
-   let element = document.body;
-   element.classList.toggle("dark-mode")
-}
-</script>
-<script>
-  function toggleSeeMore() {
-    if(document.getElementById("textarea").style.display == 'none') {
-        document.getElementById("textarea").style.display = 'block';
-        document.getElementById("seeMore").innerHTML = 'See less';
-    }
-    else {
-        document.getElementById("textarea").style.display = 'none';
-        document.getElementById("seeMore").innerHTML = 'See more';        
-    }
-}
-</script>
-
-
- <script>
-      'use strict'
-        let clients = [];
-
-        const addClient = (ev)=>{
-            ev.preventDefault();  
-            let client = {
-                id: Date.now(),
-                name: document.getElementById('ime').value,
-                age: document.getElementById('yr').value
-            }
-            clients.push(client);
-            document.forms[0].reset();
-
-            console.warn('added' , {clients} );
-            let pre = document.querySelector('#msg pre');
-            pre.textContent = '\n' + JSON.stringify(clients, '\t', 2);
-
-            
-            //saving to localStorage
-            localStorage.setItem('MyClientList', JSON.stringify(clients) );
-        }
-        document.addEventListener('DOMContentLoaded', ()=>{
-            document.getElementById('sbmt').addEventListener('click', addClient);
-        });
-    </script>
-
-<script>
-  (function(){
-  
-
-  let msg = "We use cookies to enhance your web browsing experience. By continuing to browse the site you agree to our policy on cookie usage.";
-  let closeBtnMsg = "OK";
-  let privacyBtnMsg = "Privacy Policy";
-  let privacyLink = "home.html";
-  
-
-  if(document.cookie){
-   let cookieString = document.cookie;
-   let cookieList = cookieString.split(";");
-
-   for(x = 0; x < cookieList.length; x++){
-     if (cookieList[x].indexOf("OKCookie") != -1){return}; 
-   }
-  }
-  
-  let docRoot = document.body;
-  let okC = document.createElement("div");
-  okC.setAttribute("id", "okCookie");
-  let okCp = document.createElement("p");
-  let okcText = document.createTextNode(msg); 
-  
-  //close button
-  let okCclose = document.createElement("a");
-  let okcCloseText = document.createTextNode(closeBtnMsg);
-  okCclose.setAttribute("href", "#");
-  okCclose.setAttribute("id", "okClose");
-  okCclose.appendChild(okcCloseText);
-  okCclose.addEventListener("click", closeCookie, false);
- 
-  //privacy button
-  let okCprivacy = document.createElement("a");
-  let okcPrivacyText = document.createTextNode(privacyBtnMsg);
-  okCprivacy.setAttribute("href", privacyLink);
-  okCprivacy.setAttribute("id", "okCprivacy");
-  okCprivacy.appendChild(okcPrivacyText);
-  
-  //add to DOM
-  okCp.appendChild(okcText);
-  okC.appendChild(okCp);
-  okC.appendChild(okCclose);
-  okC.appendChild(okCprivacy);
-  docRoot.appendChild(okC);
-  
-  okC.classList.add("okcBeginAnimate");
-  
-  function closeCookie(){
-    let cookieExpire = new Date();
-    cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
-    document.cookie="OKCookie=1; expires=" + cookieExpire.toGMTString() + ";";
-    docRoot.removeChild(okC);
-  }
-  
-})();
-</script>
 
 <script>
 let element = document.getElementById('box');
 
 element.addEventListener('webkitAnimationEnd', function(){
-    this.style.webkitAnimationName = '';
-}, false);
-
-};
+    this.style.webkitAnimationName = '';}, false);
 </script>
+
+<script>
+function myFunction() {
+  
+   let element = document.body;
+   element.classList.toggle("dark-mode")}
+</script>
+
 </html>
