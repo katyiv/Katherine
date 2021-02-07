@@ -240,7 +240,7 @@ footer{
 }
 h2{
   text-align: center;
-  font-size:10vw
+  font-size:10vw;
 }
 input[type=text] {
   width: 30%;
