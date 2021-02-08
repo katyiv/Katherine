@@ -17,7 +17,11 @@ div[class*=box] {
 
 .naslov
 {
-{text-align:left;position:absolute;top:25%;left:18%;transform:translate(-50%,-50%);font-size:30px;color:#e6e6e6}
+  text-align:left;
+  position:absolute;
+  top:25%;left:18%;
+  transform:translate(-50%,-50%);font-size:30px;
+  color:#e6e6e6;
 
 }
 
@@ -48,7 +52,6 @@ div[class*=box] {
   max-width:100%;
   height:auto;
   
-
 }
 
 
@@ -203,7 +206,9 @@ footer{
   
 
 }
-h2{text-align:center;color:#fff}
+h2{
+  text-align:center;
+  color:#fff;
 }
 input[type=text] {
   width: 30%;
