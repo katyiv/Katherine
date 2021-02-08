@@ -7,6 +7,7 @@
   word-spacing: 5px;
   padding-top: 100px;
   padding-bottom: 100px;
+  color:grey;
 }
 .object1{position:absolute;top:155%;left:25%;transform:translate(-50%,-50%);font-size:14px;color:#e6e6e6}.object2{position:absolute;top:155%;left:51%;transform:translate(-50%,-50%);font-size:14px;color:#e6e6e6}.object3{position:absolute;top:155%;left:75%;transform:translate(-50%,-50%);font-size:14px;color:#e6e6e6}#img1{filter:grayscale(100%);filter:grayscale(100%);transition:.3s ease-in-out;transition:.3s ease-in-out}#img1:hover{filter:grayscale(0);filter:grayscale(0)}#img2{filter:grayscale(100%);filter:grayscale(100%);transition:.3s ease-in-out;transition:.3s ease-in-out}#img2:hover{filter:grayscale(0);filter:grayscale(0)}#img3{filter:grayscale(100%);filter:grayscale(100%);transition:.3s ease-in-out;transition:.3s ease-in-out}#img3:hover{filter:grayscale(0);filter:grayscale(0)}.ghost-button{display:inline-block;width:200px;padding:8px;color:#fff;border:1px solid #fff;text-align:center;outline:0;text-decoration:none}.ghost-button:active,.ghost-button:hover{border:0}
 .email{position:relative;
