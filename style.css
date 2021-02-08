@@ -1,4 +1,3 @@
-
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
  body {
   color:white;
@@ -27,6 +26,12 @@ text-align: left;
   color: #E6E6E6;
 }
 
+@media only screen and (min-device-width: 480px){
+  .naslov{
+    
+}
+@media only screen and (min-device-width: 768px){}
+
 .dark-mode {
   background-color:#d6d4d3;
   color: black;
@@ -36,6 +41,8 @@ text-align: left;
   height: 700px; 
   background-position: center; 
   background-repeat: no-repeat;
+
+
 }
 
 
@@ -50,7 +57,9 @@ text-align: left;
   background-size: cover;
   max-width:100%;
   height:auto;
-  }
+  
+
+}
 
 
 
