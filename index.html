@@ -21,8 +21,9 @@ Place for Unique Face Art ideas and makeup">
 
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FF3M7FC8H"></script> <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js',new Date());gtag('config','G-1FF3M7FC8H');</script> </head><body><div id="fb-root"></div> <script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
-<body>
+<body onload="loadCookies()" >
 <header><img id="slika" src="sitepics/hero-dark-min.jpg"></header>
+
 <div class="naslov">
     <h2>KATHERINE MAKEUP</h2> 
   </div>
@@ -40,6 +41,7 @@ Place for Unique Face Art ideas and makeup">
  <a href="makeuprevolution.com"><img  id="image3" src="sitepics/collabb-min.jpg" onmouseover="over2()" onmouseout="out2()"  width="320" height="169"></a>
 </div>
 
+</div>
 
 <!-- Slideshow container -->
 <div class="slidediv">
@@ -96,7 +98,7 @@ Place for Unique Face Art ideas and makeup">
 <p style="text-align:center"> Stay up to date with us to receive exclusive content.<br> We respect your privacy. None of the information you provide<br> will be shared with anyone or used in other ways than for news and updates.</p>
 <br>
 <input type="email" name="mail" placeholder="Email address..."><br><br>
-<input type="submit" value="SEND">
+<input type="submit" onclick="setCookie()" value="SEND">
 <br>
 </div>
 <!-- Footer -->
@@ -178,5 +180,5 @@ function myFunction() {
    let element = document.body;
    element.classList.toggle("dark-mode")}
 </script>
-
+<script src="cookies.js"></script>
 </html>
